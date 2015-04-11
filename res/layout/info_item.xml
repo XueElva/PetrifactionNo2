@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="企业名称"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/companyName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="产品名称"
+            android:textColor="@color/dark_green"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/companyName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/productName"
+            android:text="价格"
+            android:textColor="#545454"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/line"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/notcollected"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/collect" />
+        </LinearLayout>
+
+        <include layout="@layout/line_portrait" />
+
+        <LinearLayout
+            android:id="@+id/attention"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/add"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/attention" />
+        </LinearLayout>
+
+        <include layout="@layout/line_portrait" />
+
+        <LinearLayout
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/share"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/share" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

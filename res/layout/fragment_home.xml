@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_red"
+        android:gravity="center_vertical"
+        android:padding="8dp" >
+
+        <ImageButton
+            android:id="@+id/addAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/add" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/more"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 广告 -->
+
+    <LinearLayout
+        android:id="@+id/advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/supply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/supply"
+            android:textSize="15sp" />
+
+        <TextView 
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_grey"/>
+
+        <TextView
+            android:id="@+id/demand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/demand"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line" />
+
+    <net.lz.petrifaction.view.XListView
+        android:id="@+id/xListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/temp1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/light_grey"
+        android:dividerHeight="10dip"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="@null" >
+    </net.lz.petrifaction.view.XListView>
+
+</LinearLayout>
