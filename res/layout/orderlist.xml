@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <!-- 我下的订单 -->
-
-    <TextView
-        android:id="@+id/myOrder"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        android:drawableRight="@drawable/arrow1"
-        android:gravity="center_vertical"
-        android:paddingBottom="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="5dp"
-        android:text="我下的订单"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/dark_grey" />
+       <TextView 
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/white"/>
+        <!-- 我下的订单 -->
 
-    <ListView
-        android:id="@+id/myOrderListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        <TextView
+            android:id="@+id/myOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:text="我下的订单"
+            android:textSize="18sp" />
 
-    <!-- 接到的订单 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dark_grey" />
 
-    <TextView
-        android:id="@+id/receiveOrder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        android:drawableRight="@drawable/arrow1"
-        android:gravity="center_vertical"
-        android:paddingBottom="5dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="5dp"
-        android:text="接到的订单"
-        android:textSize="18sp" />
+        <net.lz.petrifaction.view.XListView
+            android:id="@+id/myOrderListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </net.lz.petrifaction.view.XListView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/dark_grey" />
+        <!-- 接到的订单 -->
 
-    <ListView
-        android:id="@+id/receiveOrderListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        <TextView
+            android:id="@+id/receiveOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:text="接到的订单"
+            android:textSize="18sp" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dark_grey" />
+
+        <net.lz.petrifaction.view.XListView
+            android:id="@+id/receiveOrderListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </net.lz.petrifaction.view.XListView>
+    </LinearLayout>
+
+</RelativeLayout>

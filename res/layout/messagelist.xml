@@ -3,9 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-<ListView 
-    android:id="@+id/messageListView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></ListView>
+
+    <include layout="@layout/line" />
+
+    <net.lz.petrifaction.view.XListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </net.lz.petrifaction.view.XListView>
+
 </LinearLayout>

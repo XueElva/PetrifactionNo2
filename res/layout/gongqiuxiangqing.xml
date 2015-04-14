@@ -30,17 +30,18 @@
             android:text="供求详细信息"
             android:textColor="#f7f7f7"
             android:textSize="22sp" />
+
         <TextView
             android:id="@+id/shanchu"
-            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:text="删除"
+            android:layout_centerVertical="true"
             android:layout_marginRight="5dip"
+            android:text="删除"
             android:textColor="#f7f7f7"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <LinearLayout
@@ -52,7 +53,8 @@
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="15dip" >
+            android:layout_marginTop="15dip" 
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -378,7 +380,8 @@
                             android:textSize="17sp" />
                     </RelativeLayout>
                 </LinearLayout>
-             <LinearLayout
+
+                <LinearLayout
                     android:id="@+id/ll9"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -416,8 +419,8 @@
                             android:textSize="17sp" />
                     </RelativeLayout>
                 </LinearLayout>
-                
-             <LinearLayout
+
+                <LinearLayout
                     android:id="@+id/ll10"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -455,37 +458,79 @@
                             android:textSize="17sp" />
                     </RelativeLayout>
                 </LinearLayout>
-                <Button
-                    android:id="@+id/sendMessage"
-                    android:layout_marginTop="15dip"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="250dip"
-                    android:layout_height="40dip"
-                    android:background="@drawable/gvt"
-                    android:textSize="15sp"
-                    android:text="@string/sendMessage"
-                    android:textColor="#ffffff" />
-                <Button
-                    android:id="@+id/call"
-                    android:layout_marginTop="15dip"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="250dip"
-                    android:layout_height="40dip"
-                    android:background="@drawable/gvt"
-                    android:textSize="15sp"
-                    android:text="@string/call"
-                    android:textColor="#ffffff" />
-                <Button
-                    android:id="@+id/order"
-                    android:layout_marginTop="15dip"
-                    android:layout_marginBottom="15dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="250dip"
-                    android:layout_height="40dip"
-                    android:background="@drawable/gvt"
-                    android:textSize="15sp"
-                    android:text="@string/placeOrder"
-                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" 
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/sendMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/message"
+                            android:drawablePadding="5dp"
+                            android:text="@string/sendMessage"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_grey" />
+
+                    <LinearLayout
+                        android:id="@+id/placeOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/order"
+                            android:drawablePadding="5dp"
+                            android:text="@string/placeOrder" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_grey" />
+
+                    <LinearLayout
+                        android:id="@+id/call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/call"
+                            android:drawablePadding="5dp"
+                            android:text="@string/call"/>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

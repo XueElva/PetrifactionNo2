@@ -1,5 +1,6 @@
 package net.lz.petrifaction.fragment;
 
+import net.lz.petrifaction.activity.ActivityHome;
 import net.lz.petrifaction.activity.DetailInfoActivity;
 import net.lz.petrifaction.bean.MyConfig;
 import net.lz.petrifaction.tool.CommonTools;
@@ -192,6 +193,16 @@ public class HomeFragment extends Fragment implements IXListViewListener,
 				vh.price.setText("¼Û¸ñ: " + price);
 				vh.companyName.setText(jsarrdata.getJSONObject(position)
 						.getString("corpname"));
+				
+				vh.companyName.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						Intent intent=new Intent(getActivity(),ActivityHome.class);
+						startActivity(intent);
+					}
+				});
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -214,7 +225,7 @@ public class HomeFragment extends Fragment implements IXListViewListener,
 		params.put("pagesize", "10");
 		params.put("LastId", "");
 		params.put("keyword", "");
-		params.put("keytype", "1");
+		params.put("keytype", "0");
 		params.put("page", page + "");
 
 		AsyncHttpResponseHandler hd = new AsyncHttpResponseHandler() {
